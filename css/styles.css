@@ -1,0 +1,38 @@
+h1 {
+	text-align: center;
+}
+
+#player1, #player2, .winner {
+	border: 2px solid black;
+	padding: 5%;
+	margin: 10%;
+	text-align: center;
+}
+
+.winner {
+	text-align: center;
+}
+
+.diagram {
+	margin-top: 15px;
+}
+
+.item {
+	border: 2px solid black;
+	border-radius: 100%;
+	padding: 10%;
+}
+.row-two {
+	margin-top: 0;
+}
+.row-three {
+	margin-top: 25px;
+}
+
+#rock {
+	margin-bottom: -10px;
+}
+
+footer {
+	text-align: center;
+}
