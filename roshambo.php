@@ -4,6 +4,8 @@
 	<title>Rock, Paper, Scissors, Lizard, Spock</title>
 	<link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
 	<link href="css/styles.css" rel="stylesheet" media="screen">
+	<script type="text/javascript" src="js/jquery-1.11.1.js"></script>
+	<script type="text/javascript" src="js/scripts.js"></script>
 </head>
 <body class="container">
 	<h1>Rock, Paper, Scissors, Lizard, Spock</h1>
