@@ -32,9 +32,11 @@ h1 {
 }
 .row-two {
 	margin-top: 0;
+	margin-bottom: -10px;
 }
+
 .row-three {
-	margin-top: 25px;
+	margin-top: 10px;
 }
 
 #rock {

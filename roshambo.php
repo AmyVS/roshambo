@@ -52,7 +52,7 @@
 			<p class="col-xs-3 col-xs-offset-1 item" id="spock">Spock</p>
 		</div>
 	</div>
-	<footer class="nav navbar-fixed-bottom">
+	<footer class="nav navbar-bottom">
 		<p>&copy; <?php echo date('Y'); ?> Amy Vaillancourt-Sals</p>
 	</footer>
 </body>
