@@ -6,14 +6,10 @@ h1 {
 	text-align: center;
 }
 
-#player1, #player2, .winner {
+#player1, #player2, #winning-stats {
 	border: 2px solid black;
 	padding: 5%;
 	margin: 10%;
-	text-align: center;
-}
-
-.winner {
 	text-align: center;
 }
 
