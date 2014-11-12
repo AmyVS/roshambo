@@ -17,6 +17,10 @@ h1 {
 	text-align: center;
 }
 
+.play-again button {
+	margin-top: 10px;
+}
+
 .diagram {
 	margin-top: 15px;
 }
