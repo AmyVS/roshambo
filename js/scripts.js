@@ -7,4 +7,8 @@ $(document).ready(function(){
 		$('.play-again').show();
 		event.preventDefault();
 	});
+
+	$('button').click(function(event){
+		document.location.reload();
+	});
 });
