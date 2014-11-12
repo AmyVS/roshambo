@@ -10,17 +10,15 @@
 <body class="container">
 	<h1>Rock, Paper, Scissors, Lizard, Spock</h1>
 	<div class="row player-prompt">
-		<?php
-			echo "<p class='player-prompt'>What'll it be, friend?</p>";
-		?>
-		<form method="post">
+		<p>What'll it be, friend?</p>
+		<form method="post" action="roshambo.php">
 			<input type="text" name="value">
-			<input type="submit">
+			<button class="btn1">Let's Play</button>
 		</form>
 	</div>
 	<div class="row play-again">
 		<?php echo "Want to play again?" ?><br>
-		<button>Yes, please!</button>
+		<button class="btn2">Yes, please!</button>
 	</div>
 	<div class="container diagram">
 		<div class="row">
@@ -29,8 +27,7 @@
 		<div class="row row-two">
 			<p class="col-xs-3 item" id="paper">paper</p>
 			<?php
-				$human = $_POST['value'];
-				echo "<p>{$human}</p>";
+				$human = $_POST["value"];
 				$plays = array("rock", "paper", "scissors", "lizard", "spock");
 				$computer = $plays[array_rand($plays)];
 				function game($human, $computer) {
