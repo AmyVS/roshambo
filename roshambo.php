@@ -9,23 +9,18 @@
 </head>
 <body class="container">
 	<h1>Rock, Paper, Scissors, Lizard, Spock</h1>
-	<div class="game">
+	<div class="row player-prompt">
 		<?php
-			$plays = array("rock", "paper", "scissors", "lizard", "spock");
-			function game($player1, $player2) {
-				echo "<p class='player-prompt'>What'll it be, friend?</p>";
-			}
-
-			$player1 = $_POST['value'];
-			$player2 = $plays[array_rand($plays)];
-			game($player1, $player2);
+			echo "<p class='player-prompt'>What'll it be, friend?</p>";
 		?>
-		<div class="row player-prompt">
-			<form method="post">
-				<input type="text" name="value">
-				<input type="submit">
-			</form>
-		</div>
+		<form method="post">
+			<input type="text" name="value">
+			<input type="submit">
+		</form>
+	</div>
+	<div class="row play-again">
+		<?php echo "Want to play again?" ?><br>
+		<button>Yes, please!</button>
 	</div>
 	<div class="container diagram">
 		<div class="row">
@@ -34,17 +29,24 @@
 		<div class="row row-two">
 			<p class="col-xs-3 item" id="paper">paper</p>
 			<?php
-				if ((($player1 === "rock" || $player1 === "scissors") && $player2 === "lizard") ||
-					(($player1 === "lizard" || $player1 === "paper") && $player2 === "spock") ||
-					(($player1 === "spock" || $player1 === "rock") && $player2 === "scissors") ||
-					(($player1 === "scissors" || $player1 === "lizard") && $player2 === "paper") ||
-					(($player1 === "paper" || $player1 === "spock") && $player2 === "rock")) {
-					echo "<p class='col-xs-3 item' id='winning-stats'>{$player1} against {$player2}: player one wins!</p>";
-				} elseif ($player1 === $player2) {
-					echo "<p class='col-xs-3 item' id='winning-stats'>{$player1} against {$player2}: it's a tie!</p>";
-				} else {
-					echo "<p class='col-xs-3 item' id='winning-stats'>{$player1} against {$player2}: player two wins!</p>";
+				$human = $_POST['value'];
+				echo "<p>{$human}</p>";
+				$plays = array("rock", "paper", "scissors", "lizard", "spock");
+				$computer = $plays[array_rand($plays)];
+				function game($human, $computer) {
+					if ((($human === "rock" || $human === "scissors") && $computer === "lizard") ||
+						(($human === "lizard" || $human === "paper") && $computer === "spock") ||
+						(($human === "spock" || $human === "rock") && $computer === "scissors") ||
+						(($human === "scissors" || $human === "lizard") && $computer === "paper") ||
+						(($human === "paper" || $human === "spock") && $computer === "rock")) {
+						echo "<p class='col-xs-3 item' id='winning-stats'>{$human} against {$computer}: player one wins!</p>";
+					} elseif ($human === $computer) {
+						echo "<p class='col-xs-3 item' id='winning-stats'>{$human} against {$computer}: it's a tie!</p>";
+					} else {
+						echo "<p class='col-xs-3 item' id='winning-stats'>{$human} against {$computer}: player two wins!</p>";
+					}
 				}
+				game($human, $computer);
 			?>
 			<p class="col-xs-3 item" id="lizard">lizard</p>
 		</div>
