@@ -21,7 +21,7 @@
 			game($player1, $player2);
 		?>
 		<div class="row player-prompt">
-			<form method="post" action="">
+			<form method="post">
 				<input type="text" name="value">
 				<input type="submit">
 			</form>
