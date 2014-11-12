@@ -10,13 +10,20 @@
 	<div class="game">
 		<?php
 			$plays = array("rock", "paper", "scissors", "lizard", "spock");
-			$player1 = $plays[array_rand($plays)];
+			function game($player1, $player2) {
+				echo "<p class='player-prompt'>What'll it be, friend?</p>";
+			}
+
+			$player1 = $_POST['value'];
 			$player2 = $plays[array_rand($plays)];
+			game($player1, $player2);
 		?>
-		<div class="row">
-			<div class="col-xs-4">
-				<?php echo "<div id='player1'>Player One: {$player1}</div>"?>
-			</div>
+		<div class="row player-prompt">
+			<form method="post" action="">
+				<input type="text" name="value">
+				<input type="submit">
+			</form>
+		</div>
 			<div class="col-xs-4">
 				<?php
 					if ((($player1 === "rock" || $player1 === "scissors") && $player2 === "lizard") ||
@@ -42,12 +49,12 @@
 			<p class="col-xs-3 col-xs-offset-4 item" id="rock">rock</p>
 		</div>
 		<div class="row row-two">
-			<p class="col-xs-3 col-xs-offset-1 item">paper</p>
-			<p class="col-xs-3 col-xs-offset-3 item">lizard</p>
+			<p class="col-xs-3 col-xs-offset-1 item" id="paper">paper</p>
+			<p class="col-xs-3 col-xs-offset-3 item" id="lizard">lizard</p>
 		</div>
 		<div class="row row-three">
-			<p class="col-xs-3 col-xs-offset-2 item">scissors</p>
-			<p class="col-xs-3 col-xs-offset-1 item">Spock</p>
+			<p class="col-xs-3 col-xs-offset-2 item" id="scissors">scissors</p>
+			<p class="col-xs-3 col-xs-offset-1 item" id="spock">Spock</p>
 		</div>
 	</div>
 	<footer class="nav navbar-fixed-bottom">

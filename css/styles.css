@@ -2,6 +2,10 @@ h1 {
 	text-align: center;
 }
 
+.player-prompt {
+	text-align: center;
+}
+
 #player1, #player2, .winner {
 	border: 2px solid black;
 	padding: 5%;
